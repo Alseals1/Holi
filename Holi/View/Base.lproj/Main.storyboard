@@ -73,6 +73,9 @@
                             <constraint firstItem="Udn-Pa-FYP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tL9-Ta-kHa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Udn-Pa-FYP" id="jkZ-Nr-kFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
