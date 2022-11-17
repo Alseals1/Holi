@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60F15652925DB0800FD1725 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F15632925DB0800FD1725 /* HeaderView.swift */; };
+		C60F15662925DB0800FD1725 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60F15642925DB0800FD1725 /* HeaderView.xib */; };
+		C60F156A2925F17500FD1725 /* RecommendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F15682925F17500FD1725 /* RecommendedCell.swift */; };
+		C60F156B2925F17500FD1725 /* RecommendedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C60F15692925F17500FD1725 /* RecommendedCell.xib */; };
 		C65F72402925563C00218C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F723F2925563C00218C5B /* AppDelegate.swift */; };
 		C65F72422925563C00218C5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F72412925563C00218C5B /* SceneDelegate.swift */; };
 		C65F72442925563C00218C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F72432925563C00218C5B /* ViewController.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C60F15632925DB0800FD1725 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C60F15642925DB0800FD1725 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		C60F15682925F17500FD1725 /* RecommendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCell.swift; sourceTree = "<group>"; };
+		C60F15692925F17500FD1725 /* RecommendedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendedCell.xib; sourceTree = "<group>"; };
 		C65F723C2925563C00218C5B /* Holi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F723F2925563C00218C5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C65F72412925563C00218C5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C60F15672925F10500FD1725 /* Recommended */ = {
+			isa = PBXGroup;
+			children = (
+				C60F15682925F17500FD1725 /* RecommendedCell.swift */,
+				C60F15692925F17500FD1725 /* RecommendedCell.xib */,
+			);
+			path = Recommended;
+			sourceTree = "<group>";
+		};
 		C65F72332925563C00218C5B = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C65F72C42925661700218C5B /* Feature */,
+				C60F15672925F10500FD1725 /* Recommended */,
 				C65F724A2925563D00218C5B /* LaunchScreen.storyboard */,
 				C65F72452925563C00218C5B /* Main.storyboard */,
 			);
@@ -128,6 +146,8 @@
 			children = (
 				C65F72BB29255C5500218C5B /* FeaturedCell.xib */,
 				C65F72BA29255C5500218C5B /* FeaturedCell.swift */,
+				C60F15632925DB0800FD1725 /* HeaderView.swift */,
+				C60F15642925DB0800FD1725 /* HeaderView.xib */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -200,8 +220,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60F15662925DB0800FD1725 /* HeaderView.xib in Resources */,
 				C65F724C2925563D00218C5B /* LaunchScreen.storyboard in Resources */,
 				C65F72BD29255C5500218C5B /* FeaturedCell.xib in Resources */,
+				C60F156B2925F17500FD1725 /* RecommendedCell.xib in Resources */,
 				C65F72492925563D00218C5B /* Assets.xcassets in Resources */,
 				C65F72472925563C00218C5B /* Main.storyboard in Resources */,
 			);
@@ -220,9 +242,11 @@
 				C65F72C92925689200218C5B /* Item.swift in Sources */,
 				C65F72CB292569A300218C5B /* Kind.swift in Sources */,
 				C65F72C02925612100218C5B /* UIView+Extensions.swift in Sources */,
+				C60F156A2925F17500FD1725 /* RecommendedCell.swift in Sources */,
 				C65F72CF29256C8E00218C5B /* UICollectionView+Extension.swift in Sources */,
 				C65F72402925563C00218C5B /* AppDelegate.swift in Sources */,
 				C65F72422925563C00218C5B /* SceneDelegate.swift in Sources */,
+				C60F15652925DB0800FD1725 /* HeaderView.swift in Sources */,
 				C65F72D129256CAE00218C5B /* RegisterableView.swift in Sources */,
 				C65F72C62925670800218C5B /* LayoutSection.swift in Sources */,
 			);

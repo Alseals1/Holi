@@ -23,12 +23,13 @@ class ViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[sectionIndex].kind
             
             switch sectionKind {
-            case .feature!:
+            case .feature:
                 return LayoutSectionSectionFactory().layout()
+            case .recommended:
+                return LayoutSectionSectionFactory().recommendedLayout()
                 
             default: return nil
             }
-            
         }
         return layout
     }()
@@ -41,28 +42,30 @@ class ViewController: UIViewController {
    private func setup() {
         registerCells()
        setupDataSource()
+       setupHeader()
        dummyData()
     }
     
     private func dummyData() {
         let section = [
-            Section(kind: .feature!, items: [Item(),Item(),Item(),Item()])
+            Section(kind: .feature, items: [Item(),Item(),Item(),Item()]),
+            Section(kind: .recommended, items: [Item(),Item(),Item(),Item()])
         ]
         
         snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections(section)
         section.forEach { snapshot.appendItems($0.items, toSection: $0) }
         dataSource.apply(snapshot, animatingDifferences: false)
-            
-        
     }
     
     private func registerCells() {
         let cells: [RegisterableView] = [
-            .nib(FeaturedCell.self)
+            .nib(FeaturedCell.self),
+            .nib(RecommendedCell.self)
         ]
-        collectionView.register(cells: cells)
         
+        collectionView.register(cells: cells)
+        collectionView.register(UINib(nibName: HeaderView.nib, bundle: nil), forSupplementaryViewOfKind: HeaderView.kind, withReuseIdentifier: HeaderView.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
     }
     
@@ -73,16 +76,43 @@ class ViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[indexPath.section].kind
             
             switch sectionKind {
-            case .feature!:
+            case .feature:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedCell.reuseIdentifier, for: indexPath)
+                return cell
+            case .recommended:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedCell.reuseIdentifier, for: indexPath)
                 return cell
                 
             default: return nil
             }
         }
-        
     }
-
+    
+    private func setupHeader() {
+        dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let self = self else { return nil}
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionKind = snapshot.sectionIdentifiers[indexPath.section].kind
+            
+            
+            switch sectionKind {
+            case .feature:
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
+                
+                header.title("Feature")
+                return header
+            case .recommended:
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
+                
+                header.title("Recommended")
+                return header
+                
+            default: return nil
+            }
+            
+        }
+    }
 
 }
 

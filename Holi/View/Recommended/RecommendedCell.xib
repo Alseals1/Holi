@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendedCell" customModule="Holi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recommend-img" translatesAutoresizingMaskIntoConstraints="NO" id="9XF-gY-bIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="327" id="WFm-8B-5Og"/>
+                            <constraint firstAttribute="height" constant="200" id="llE-Qd-uH8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPC-mJ-San">
+                        <rect key="frame" x="0.0" y="145" width="327" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XII International Pop-Rock Festival • Sound" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDj-9F-m6J">
+                                <rect key="frame" x="16" y="1" width="214" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="nO0-m2-SVx"/>
+                                    <constraint firstAttribute="width" constant="214" id="yCc-08-IJa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.94682687519999997" green="0.94752603769999999" blue="0.9688852429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.94682687519999997" green="0.94752603769999999" blue="0.9688852429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1s-Ka-uxo">
+                                <rect key="frame" x="287" y="7" width="24" height="24"/>
+                                <color key="backgroundColor" name="buttonOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="bZv-wO-qDv"/>
+                                    <constraint firstAttribute="height" constant="24" id="tcR-rh-S2G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JDj-9F-m6J" firstAttribute="leading" secondItem="SPC-mJ-San" secondAttribute="leading" constant="16" id="Es2-aa-7AA"/>
+                            <constraint firstAttribute="bottom" secondItem="D1s-Ka-uxo" secondAttribute="bottom" constant="24" id="av4-rG-qHd"/>
+                            <constraint firstAttribute="height" constant="55" id="e4l-5l-vex"/>
+                            <constraint firstAttribute="trailing" secondItem="D1s-Ka-uxo" secondAttribute="trailing" constant="16" id="eMD-95-baV"/>
+                            <constraint firstAttribute="bottom" secondItem="JDj-9F-m6J" secondAttribute="bottom" id="nYn-Lf-5Ab"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="9XF-gY-bIQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Mrl-1o-1EM"/>
+                <constraint firstItem="9XF-gY-bIQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QLi-1e-G8F"/>
+                <constraint firstAttribute="trailing" secondItem="SPC-mJ-San" secondAttribute="trailing" id="VDL-y5-gw0"/>
+                <constraint firstAttribute="bottom" secondItem="SPC-mJ-San" secondAttribute="bottom" id="cbD-13-Pa3"/>
+                <constraint firstItem="SPC-mJ-San" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hMF-2F-hUf"/>
+                <constraint firstAttribute="trailing" secondItem="9XF-gY-bIQ" secondAttribute="trailing" id="oGl-nr-1zb"/>
+                <constraint firstAttribute="bottom" secondItem="9XF-gY-bIQ" secondAttribute="bottom" id="qrh-Op-KGC"/>
+            </constraints>
+            <size key="customSize" width="375" height="276"/>
+            <point key="canvasLocation" x="293.89312977099235" y="-59.859154929577471"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="recommend-img" width="327" height="200"/>
+        <namedColor name="buttonOrange">
+            <color red="1" green="0.29019607843137257" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

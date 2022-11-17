@@ -17,6 +17,7 @@ struct Section: Hashable {
     
     enum App: String {
         case feature
+        case recommended
         case latest
     }
     
