@@ -45,9 +45,7 @@ struct LayoutSectionSectionFactory: LayoutSection {
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .estimated(60))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: HeaderView.kind, alignment: .topLeading)
-        
         section.boundarySupplementaryItems = [sectionHeader]
-        
         return section
     }
     

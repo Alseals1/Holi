@@ -21,5 +21,4 @@ struct Section: Hashable {
         case latest
         case categories
     }
-    
 }
