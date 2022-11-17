@@ -19,6 +19,7 @@ struct Section: Hashable {
         case feature
         case recommended
         case latest
+        case categories
     }
     
 }

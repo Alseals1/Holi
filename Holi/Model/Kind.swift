@@ -10,4 +10,6 @@ struct Kind: RawRepresentable, Hashable {
     
     static let feature = Kind(rawValue: Section.App.feature.rawValue)
     static let recommended = Kind(rawValue: Section.App.recommended.rawValue)
+    static let latest = Kind(rawValue: Section.App.latest.rawValue)
+    static let categories = Kind(rawValue: Section.App.categories.rawValue)
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
     private var section: [Section] = []
     
+  
     lazy var collectionViewLayout: UICollectionViewLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, env) -> NSCollectionLayoutSection? in
             guard let self = self else { return nil }
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
                 return LayoutSectionSectionFactory().layout()
             case .recommended:
                 return LayoutSectionSectionFactory().recommendedLayout()
+            case.latest:
+                return LayoutSectionSectionFactory().latestLayout()
+            case .categories:
+                return LayoutSectionSectionFactory().categoriesLayout()
                 
             default: return nil
             }
@@ -49,7 +54,9 @@ class ViewController: UIViewController {
     private func dummyData() {
         let section = [
             Section(kind: .feature, items: [Item(),Item(),Item(),Item()]),
-            Section(kind: .recommended, items: [Item(),Item(),Item(),Item()])
+            Section(kind: .recommended, items: [Item(),Item(),Item(),Item()]),
+            Section(kind: .latest, items: [Item(),Item(),Item(),Item(),Item()]),
+            Section(kind: .categories, items: [Item(),Item(),Item(),Item(),Item()])
         ]
         
         snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
@@ -61,7 +68,9 @@ class ViewController: UIViewController {
     private func registerCells() {
         let cells: [RegisterableView] = [
             .nib(FeaturedCell.self),
-            .nib(RecommendedCell.self)
+            .nib(RecommendedCell.self),
+            .nib(LatestCell.self),
+            .nib(CategoriesCell.self)
         ]
         
         collectionView.register(cells: cells)
@@ -82,10 +91,19 @@ class ViewController: UIViewController {
             case .recommended:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedCell.reuseIdentifier, for: indexPath)
                 return cell
+            case .latest:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LatestCell.reuseIdentifier, for: indexPath)
+                return cell
+            case .categories:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.reuseIdentifier, for: indexPath)
+                return cell
                 
             default: return nil
             }
+            
+        
         }
+        
     }
     
     private func setupHeader() {
@@ -99,13 +117,19 @@ class ViewController: UIViewController {
             switch sectionKind {
             case .feature:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
-                
                 header.title("Feature")
                 return header
             case .recommended:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
-                
                 header.title("Recommended")
+                return header
+            case .latest:
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
+                header.title("Latest")
+                return header
+            case .categories:
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as! HeaderView
+                header.title("Categories")
                 return header
                 
             default: return nil
