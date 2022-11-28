@@ -20,5 +20,11 @@ struct Section: Hashable {
         case recommended
         case latest
         case categories
+        case detailImage
+        case detailInfo
+        case recomendations
+        case location
+        case aboutGuide
+        case similiarEvents
     }
 }

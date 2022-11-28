@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WBs-X0-cDg">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +51,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-Pa-FYP">
-                                <rect key="frame" x="0.0" y="109" width="390" height="701"/>
+                                <rect key="frame" x="0.0" y="109" width="390" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WpH-pG-SNl">
                                     <size key="itemSize" width="128" height="128"/>
@@ -59,6 +60,9 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="f0q-ND-lo8"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,19 +77,56 @@
                             <constraint firstItem="Udn-Pa-FYP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tL9-Ta-kHa"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="Rs0-co-tiL">
+                        <color key="badgeColor" name="buttonOrange"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="Udn-Pa-FYP" id="jkZ-Nr-kFW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1020" y="-239"/>
+        </scene>
+        <!--DetailViewController-->
+        <scene sceneID="XUK-00-sFz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailStoryboard" referencedIdentifier="DetailViewController" id="yuY-Ha-P9G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Detail" image="doc.text.below.ecg.fill" catalog="system" id="hNE-SM-6j3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtJ-ck-bep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122" y="260"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UQC-d7-q10">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WBs-X0-cDg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Cj-A0-sYB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Dgg-9H-lDa"/>
+                        <segue destination="yuY-Ha-P9G" kind="relationship" relationship="viewControllers" id="CIn-1T-oYd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpS-Xi-SQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="138.46153846153845" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>
         <image name="Screen Shot 2022-11-13 at 10.19.13 AM" width="388" height="380"/>
+        <image name="doc.text.below.ecg.fill" catalog="system" width="115" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="logo" width="51" height="22"/>
         <image name="menu" width="48" height="48"/>
+        <namedColor name="buttonOrange">
+            <color red="1" green="0.29019607843137257" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setup()
     }
     
@@ -140,3 +141,9 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       // guard let selectedCell = dataSource.itemIdentifier(for: indexPath) else { return }
+        print("Hello")
+    }
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailInfoCell" customModule="Holi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="561"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="561"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiking event • Expert eperience (Level II)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsZ-bF-Bhy">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="96" id="4My-pJ-3LB"/>
+                            <constraint firstAttribute="width" constant="339" id="oVp-Y5-iiW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8C-dh-CD2">
+                        <rect key="frame" x="0.0" y="131" width="305" height="383"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="383" id="SgA-PB-Ef3"/>
+                            <constraint firstAttribute="width" constant="305" id="isy-qy-Icc"/>
+                        </constraints>
+                        <string key="text">The Lorem ipum filling text is used by graphic designers, programmers and printers with the aim of occupying the spaces of a website, an advertising product or an editorial production whose final text is not yet ready.
+
+In order to have a result that is more in keeping with the final result, the graphic designers, designers or typographers report the.
+
+The choice of font and font size with which Lorem ipsum is reproduced answers to specific needs that go beyond the simple and simple filling of spaces dedicated to accepting real texts.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fva-JF-BSE">
+                        <rect key="frame" x="0.0" y="101" width="212" height="15"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pPX-kV-Y4L">
+                                <rect key="frame" x="0.0" y="1.6666666666666572" width="12" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="lightGrayText"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/10/1022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRV-Ga-jbi">
+                                <rect key="frame" x="15" y="2.8421709430404007e-14" width="69" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="lightGrayText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ow2-DA-dzN">
+                                <rect key="frame" x="106" y="1.0000000000000284" width="10" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="lightGrayText"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manhattan, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrD-Rs-pcg">
+                                <rect key="frame" x="120" y="2.8421709430404007e-14" width="92" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="lightGrayText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="212" id="7KS-6a-os2"/>
+                            <constraint firstAttribute="height" constant="15" id="xIc-b5-o36"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tsZ-bF-Bhy" secondAttribute="trailing" id="AUO-YP-Abl"/>
+                <constraint firstItem="fva-JF-BSE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IT4-lD-jFb"/>
+                <constraint firstItem="j8C-dh-CD2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hFC-Py-b6d"/>
+                <constraint firstItem="tsZ-bF-Bhy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hLq-pV-gEn"/>
+                <constraint firstItem="j8C-dh-CD2" firstAttribute="top" secondItem="fva-JF-BSE" secondAttribute="bottom" constant="15" id="jDz-vw-mSU"/>
+                <constraint firstItem="tsZ-bF-Bhy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jb1-2m-mod"/>
+                <constraint firstItem="fva-JF-BSE" firstAttribute="top" secondItem="tsZ-bF-Bhy" secondAttribute="bottom" constant="5" id="rlC-YL-vNd"/>
+            </constraints>
+            <size key="customSize" width="339" height="561"/>
+            <point key="canvasLocation" x="159.54198473282443" y="209.50704225352115"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <namedColor name="lightGrayText">
+            <color red="0.61799997091293335" green="0.61799997091293335" blue="0.61799997091293335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -90,4 +90,91 @@ struct LayoutSectionSectionFactory: LayoutSection {
         
         return section
     }
+    
+    //MARK: -----------> DETAIL VC <--------------
+    
+    func detailImageLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(532))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 24, bottom: 0, trailing: 24)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        
+        return section
+    }
+    
+    func detailInfoLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(550))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 24, bottom: 0, trailing: 24)
+        
+        let section = NSCollectionLayoutSection(group: group)
+       
+        
+        return section
+    }
+    
+    func recommendationLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(220))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 24, bottom: 0, trailing: 24)
+        
+        let section = NSCollectionLayoutSection(group: group)
+       
+        
+        return section
+    }
+    
+    func locationtInfoLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(300))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 24, bottom: 0, trailing: 24)
+        
+        let section = NSCollectionLayoutSection(group: group)
+       
+        
+        return section
+    }
+    
+    func aboutGuideLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(300))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 24, bottom: 0, trailing: 24)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        return section
+    }
+    
+    func similiarEventLayout() -> NSCollectionLayoutSection {
+            let itemsize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemsize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+            
+            let groupsize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.60), heightDimension:.absolute(229))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupsize, subitems: [item])
+            group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 24, leading: 0, bottom: 0, trailing: 0)
+            section.orthogonalScrollingBehavior = .groupPaging
+          
+            return section
+    }
+    
 }
